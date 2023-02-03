@@ -11,3 +11,4 @@ Consists of:
 -   Postcss
 -   Eslint
 -   Prettier
+-   Vitest
