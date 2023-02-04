@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { AxiosRequestConfig } from 'axios'
+
 type Get = {
     url: string
-    params?: any
-    config?: any
+    params?: Record<string, any>
+    config?: AxiosRequestConfig
 }
 
 type Post = Omit<Get, 'params'> & { data?: any }

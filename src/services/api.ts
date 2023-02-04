@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { Get, Post, Put, Delete } from '@/types'
 
-const errorHandler = async (promise: Promise<any>) => {
+const errorHandler = async (promise: Promise<AxiosResponse>) => {
     try {
-        const res = await promise
-        return { res, err: null }
+        const result = await promise
+        return { result, err: null }
     } catch (err) {
-        return { res: null, err }
+        return { result: null, err }
     }
 }
 
