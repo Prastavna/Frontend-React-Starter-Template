@@ -8,5 +8,10 @@ export default defineConfig({
     plugins: [react()],
     test: {
         environment: 'jsdom'
+    },
+    resolve: {
+        alias: {
+            '@': '/src'
+        }
     }
 })
